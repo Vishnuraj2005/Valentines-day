@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Valentine's Fantasy</title>
+    <!-- Bootstrap Grid Only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <div class="heart-loader"></div>
+        <div class="loading-text">Loading Love...</div>
+    </div>
+
+    <!-- Music Player Control -->
+    <div class="music-player-container">
+        <button id="music-toggle" class="music-btn" title="Play Music">
+            <i class="fas fa-music"></i>
+        </button>
+        <span class="music-label">Our Song</span>
+        <audio id="bg-music" loop>
+            <!-- Placeholder for audio file. User should replace this. -->
+            <source src="assets/last 7mins.mp3.mpeg" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="parallax-bg" id="parallax-bg"></div>
+            <div class="particles-container" id="hero-particles"></div>
+
+            <div class="hero-content text-center">
+                <h1 class="main-title shine-effect">To My Dearest [Shree]</h1>
+                <p class="subtitle fade-in-up">Welcome to our magical world</p>
+                <div class="interactive-heart-container">
+                    <div class="pulsing-heart" id="reveal-btn">
+                        Click Me
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <i class="fas fa-chevron-down bouncing"></i>
+            </div>
+        </section>
+
+        <!-- Love Letter Section -->
+        <section id="love-letter" class="content-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="parchment-card">
+                            <div class="decorative-border top"></div>
+                            <h2 class="section-title">My Love Letter</h2>
+                            <div class="typewriter-container">
+                                <p id="typewriter-text"></p>
+                            </div>
+                            <div class="decorative-border bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section id="gallery" class="content-section bg-light-pink">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Our Memories</h2>
+                <div class="row g-4">
+                    <!-- Gallery Item 1 -->
+                    <div class="col-md-4">
+                        <div class="memory-card">
+                            <div class="memory-img-placeholder" style="background: #ff9a9e;">
+                                <i class="fas fa-camera-retro"></i>
+                            </div>
+                            <div class="memory-caption">
+                                <h3>First Date</h3>
+                                <p>Where it all began...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 2 -->
+                    <div class="col-md-4">
+                        <div class="memory-card">
+                            <div class="memory-img-placeholder" style="background: #fad0c4;">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="memory-caption">
+                                <h3>Our First Trip</h3>
+                                <p>Adventure awaits us.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Gallery Item 3 -->
+                    <div class="col-md-4">
+                        <div class="memory-card">
+                            <div class="memory-img-placeholder" style="background: #a18cd1;">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="memory-caption">
+                                <h3>Anniversary</h3>
+                                <p>Celebrating us.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reasons I Love You Section -->
+        <section id="reasons" class="content-section">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Reasons I Love You</h2>
+                <div class="reasons-list">
+                    <div class="reason-item scroll-reveal">
+                        <div class="heart-icon"><i class="fas fa-heart"></i></div>
+                        <p>Your smile lights up my darkest days.</p>
+                    </div>
+                    <div class="reason-item scroll-reveal right">
+                        <div class="heart-icon"><i class="fas fa-heart"></i></div>
+                        <p>The way you make me laugh until it hurts.</p>
+                    </div>
+                    <div class="reason-item scroll-reveal">
+                        <div class="heart-icon"><i class="fas fa-heart"></i></div>
+                        <p>Your kindness towards everyone you meet.</p>
+                    </div>
+                    <div class="reason-item scroll-reveal right">
+                        <div class="heart-icon"><i class="fas fa-heart"></i></div>
+                        <p>How you always know exactly what to say.</p>
+                    </div>
+                    <div class="reason-item scroll-reveal">
+                        <div class="heart-icon"><i class="fas fa-heart"></i></div>
+                        <p>Just being you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section id="countdown" class="content-section text-center">
+            <div class="container">
+                <h2 class="section-title">Counting Down To Our Next Adventure</h2>
+                <div id="countdown-timer" class="d-flex justify-content-center gap-4">
+                    <div class="time-box">
+                        <span id="days">00</span>
+                        <div class="label">Days</div>
+                    </div>
+                    <div class="time-box">
+                        <span id="hours">00</span>
+                        <div class="label">Hours</div>
+                    </div>
+                    <div class="time-box">
+                        <span id="minutes">00</span>
+                        <div class="label">Minutes</div>
+                    </div>
+                    <div class="time-box">
+                        <span id="seconds">00</span>
+                        <div class="label">Seconds</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open When Section -->
+        <section id="open-when" class="content-section bg-light-pink">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Open When...</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-4">
+                        <div class="envelope"
+                            onclick="alert('Message: You are stronger than you think. I believe in you!')">
+                            <div class="flap"></div>
+                            <div class="body"></div>
+                            <div class="text">You felt sad</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="envelope"
+                            onclick="alert('Message: I am so proud of you! Let\'s celebrate tonight!')">
+                            <div class="flap"></div>
+                            <div class="body"></div>
+                            <div class="text">You achieved a goal</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="envelope" onclick="alert('Message: Just remember this moment. I love you.')">
+                            <div class="flap"></div>
+                            <div class="body"></div>
+                            <div class="text">You miss me</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Floating UI Elements -->
+    <div class="floating-interactions">
+        <button id="confetti-btn" class="float-btn"><i class="fas fa-magic"></i></button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
